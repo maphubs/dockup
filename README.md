@@ -1,18 +1,18 @@
 
 # Dockup
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
-
 Docker image to backup your Docker container volumes
 
 Why the name? Docker + Backup = Dockup
+
+MapHubs fork of the deprecated image originally made by Tutum
 
 # Usage
 
 You have a container running with one or more volumes:
 
 ```
-$ docker run -d --name mysql tutum/mysql
+$ docker run -d --name mysql quay.io/maphubs/dockup
 ```
 
 From executing a `$ docker inspect mysql` we see that this container has two volumes:
@@ -78,5 +78,3 @@ These rules are enforced in some regions.
 
 To perform a restore launch the container with the RESTORE variable set to true
 
-
-![](http://s.tutum.co.s3.amazonaws.com/support/images/dockup-readme.png)
